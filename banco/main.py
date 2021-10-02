@@ -3,7 +3,7 @@ from conta import Conta
 
 def sucesso(ok):
     if (ok):
-        print('\nOperação realizada com sucesso!')
+        print('\nOperação realizada com sucessos!')
     else:
         print('\nNão foi possível realizar a operação!')
 # ADICIONANDO INFORMAÇÕES
