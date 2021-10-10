@@ -93,10 +93,15 @@ class Ui_MainWindow(object):
 "")
         self.lineEdit_4.setObjectName("lineEdit_4")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(250, 380, 121, 31))
+        self.pushButton.setGeometry(QtCore.QRect(320, 370, 121, 31))
         self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.pushButton.setStyleSheet("color: rgb(255, 255, 255);")
         self.pushButton.setObjectName("pushButton")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(150, 370, 121, 31))
+        self.pushButton_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_2.setStyleSheet("color: rgb(255, 255, 255);")
+        self.pushButton_2.setObjectName("pushButton_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -115,6 +120,7 @@ class Ui_MainWindow(object):
         self.label_5.setText(_translate("MainWindow", "Nascimento"))
         self.label_6.setText(_translate("MainWindow", "Senha"))
         self.pushButton.setText(_translate("MainWindow", "Cadastrar"))
+        self.pushButton_2.setText(_translate("MainWindow", "Voltar"))
 
 
 if __name__ == "__main__":
