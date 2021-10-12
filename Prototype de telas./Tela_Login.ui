@@ -41,7 +41,7 @@
      <string>BANCO</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="cpf">
     <property name="geometry">
      <rect>
       <x>190</x>
@@ -57,11 +57,11 @@
      <string>CPF</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="entrar">
     <property name="geometry">
      <rect>
       <x>190</x>
-      <y>200</y>
+      <y>250</y>
       <width>261</width>
       <height>31</height>
      </rect>
@@ -86,7 +86,7 @@
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>240</y>
+      <y>290</y>
       <width>231</width>
       <height>31</height>
      </rect>
@@ -100,6 +100,22 @@ color:#FFF;</string>
     </property>
     <property name="text">
      <string>Não tem uma conta? Registre-se</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="senha">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>200</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="placeholderText">
+     <string>Senha</string>
     </property>
    </widget>
   </widget>

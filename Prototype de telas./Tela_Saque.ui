@@ -61,7 +61,7 @@
      <string>R$ 0,00</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="buttonSacar">
     <property name="geometry">
      <rect>
       <x>340</x>
@@ -79,7 +79,7 @@
      <string>Sacar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="buttonVolta">
     <property name="geometry">
      <rect>
       <x>190</x>

@@ -62,7 +62,7 @@
       <string>Saldo</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_2">
+    <widget class="QLabel" name="saldo">
      <property name="geometry">
       <rect>
        <x>50</x>

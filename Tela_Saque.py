@@ -36,18 +36,18 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "}")
         self.lineEdit.setObjectName("lineEdit")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(340, 220, 89, 41))
-        self.pushButton.setStyleSheet("QPushButton{\n"
+        self.buttonSacar = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonSacar.setGeometry(QtCore.QRect(340, 220, 89, 41))
+        self.buttonSacar.setStyleSheet("QPushButton{\n"
 "    color: #FFF;\n"
 "}")
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(190, 220, 89, 41))
-        self.pushButton_2.setStyleSheet("QPushButton{\n"
+        self.buttonSacar.setObjectName("buttonSacar")
+        self.buttonVolta = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonVolta.setGeometry(QtCore.QRect(190, 220, 89, 41))
+        self.buttonVolta.setStyleSheet("QPushButton{\n"
 "    color: #FFF;\n"
 "}")
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.buttonVolta.setObjectName("buttonVolta")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -61,8 +61,8 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.titulo.setText(_translate("MainWindow", "Saque de dinheiro"))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "R$ 0,00"))
-        self.pushButton.setText(_translate("MainWindow", "Sacar"))
-        self.pushButton_2.setText(_translate("MainWindow", "Menu"))
+        self.buttonSacar.setText(_translate("MainWindow", "Sacar"))
+        self.buttonVolta.setText(_translate("MainWindow", "Menu"))
 
 
 if __name__ == "__main__":
