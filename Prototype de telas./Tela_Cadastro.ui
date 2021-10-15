@@ -124,7 +124,7 @@
      <string>Nascimento</string>
     </property>
    </widget>
-   <widget class="QDateEdit" name="dateEdit">
+   <widget class="QDateEdit" name="nasc">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -138,7 +138,7 @@
 </string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="nome">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -153,7 +153,7 @@ border-radius: 5px;
 </string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="endereco">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -169,7 +169,7 @@ border-radius: 5px;
 </string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
+   <widget class="QLineEdit" name="cpf">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -205,7 +205,7 @@ border-radius: 5px;
      <string>Senha</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="senha">
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -220,7 +220,7 @@ border-radius: 5px;
 </string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="buttonCadastrar">
     <property name="geometry">
      <rect>
       <x>320</x>
@@ -239,7 +239,7 @@ border-radius: 5px;
      <string>Cadastrar</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="buttonVolta">
     <property name="geometry">
      <rect>
       <x>150</x>

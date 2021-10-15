@@ -55,30 +55,30 @@ class Ui_MainWindow(object):
         self.label_5.setFont(font)
         self.label_5.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_5.setObjectName("label_5")
-        self.dateEdit = QtWidgets.QDateEdit(self.centralwidget)
-        self.dateEdit.setGeometry(QtCore.QRect(360, 290, 111, 31))
-        self.dateEdit.setStyleSheet("background-color: #FFF;\n"
+        self.nasc = QtWidgets.QDateEdit(self.centralwidget)
+        self.nasc.setGeometry(QtCore.QRect(360, 290, 111, 31))
+        self.nasc.setStyleSheet("background-color: #FFF;\n"
 "")
-        self.dateEdit.setObjectName("dateEdit")
-        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(60, 110, 531, 31))
-        self.lineEdit.setStyleSheet("background-color: #FFF;\n"
+        self.nasc.setObjectName("nasc")
+        self.nome = QtWidgets.QLineEdit(self.centralwidget)
+        self.nome.setGeometry(QtCore.QRect(60, 110, 531, 31))
+        self.nome.setStyleSheet("background-color: #FFF;\n"
 "border-radius: 5px;\n"
 "")
-        self.lineEdit.setObjectName("lineEdit")
-        self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_2.setGeometry(QtCore.QRect(60, 200, 261, 31))
-        self.lineEdit_2.setStyleSheet("\n"
+        self.nome.setObjectName("nome")
+        self.endereco = QtWidgets.QLineEdit(self.centralwidget)
+        self.endereco.setGeometry(QtCore.QRect(60, 200, 261, 31))
+        self.endereco.setStyleSheet("\n"
 "    background-color: #FFF;\n"
 "    border-radius: 5px;\n"
 "")
-        self.lineEdit_2.setObjectName("lineEdit_2")
-        self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_3.setGeometry(QtCore.QRect(360, 200, 231, 31))
-        self.lineEdit_3.setStyleSheet("background-color: #FFF;\n"
+        self.endereco.setObjectName("endereco")
+        self.cpf = QtWidgets.QLineEdit(self.centralwidget)
+        self.cpf.setGeometry(QtCore.QRect(360, 200, 231, 31))
+        self.cpf.setStyleSheet("background-color: #FFF;\n"
 "border-radius: 5px;\n"
 "")
-        self.lineEdit_3.setObjectName("lineEdit_3")
+        self.cpf.setObjectName("cpf")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
         self.label_6.setGeometry(QtCore.QRect(60, 260, 67, 17))
         font = QtGui.QFont()
@@ -86,22 +86,22 @@ class Ui_MainWindow(object):
         self.label_6.setFont(font)
         self.label_6.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_6.setObjectName("label_6")
-        self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_4.setGeometry(QtCore.QRect(60, 290, 261, 31))
-        self.lineEdit_4.setStyleSheet("background-color: #FFF;\n"
+        self.senha = QtWidgets.QLineEdit(self.centralwidget)
+        self.senha.setGeometry(QtCore.QRect(60, 290, 261, 31))
+        self.senha.setStyleSheet("background-color: #FFF;\n"
 "border-radius: 5px;\n"
 "")
-        self.lineEdit_4.setObjectName("lineEdit_4")
-        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(320, 370, 121, 31))
-        self.pushButton.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pushButton.setStyleSheet("color: rgb(255, 255, 255);")
-        self.pushButton.setObjectName("pushButton")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(150, 370, 121, 31))
-        self.pushButton_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.pushButton_2.setStyleSheet("color: rgb(255, 255, 255);")
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.senha.setObjectName("senha")
+        self.buttonCadastrar = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonCadastrar.setGeometry(QtCore.QRect(320, 370, 121, 31))
+        self.buttonCadastrar.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.buttonCadastrar.setStyleSheet("color: rgb(255, 255, 255);")
+        self.buttonCadastrar.setObjectName("buttonCadastrar")
+        self.buttonVolta = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonVolta.setGeometry(QtCore.QRect(150, 370, 121, 31))
+        self.buttonVolta.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.buttonVolta.setStyleSheet("color: rgb(255, 255, 255);")
+        self.buttonVolta.setObjectName("buttonVolta")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -119,8 +119,8 @@ class Ui_MainWindow(object):
         self.label_4.setText(_translate("MainWindow", "CPF"))
         self.label_5.setText(_translate("MainWindow", "Nascimento"))
         self.label_6.setText(_translate("MainWindow", "Senha"))
-        self.pushButton.setText(_translate("MainWindow", "Cadastrar"))
-        self.pushButton_2.setText(_translate("MainWindow", "Voltar"))
+        self.buttonCadastrar.setText(_translate("MainWindow", "Cadastrar"))
+        self.buttonVolta.setText(_translate("MainWindow", "Voltar"))
 
 
 if __name__ == "__main__":
