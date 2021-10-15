@@ -21,7 +21,7 @@
     <property name="geometry">
      <rect>
       <x>240</x>
-      <y>50</y>
+      <y>20</y>
       <width>141</width>
       <height>51</height>
      </rect>
@@ -46,7 +46,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>120</y>
+      <y>90</y>
       <width>361</width>
       <height>271</height>
      </rect>
@@ -62,10 +62,13 @@
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>410</y>
+      <y>380</y>
       <width>90</width>
       <height>28</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #FFF;</string>
     </property>
     <property name="text">
      <string>Voltar</string>
