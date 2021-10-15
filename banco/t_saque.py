@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Tela_Extrato.ui'
+# Form implementation generated from reading ui file 'Tela_Saque.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -11,7 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
+class T_Saque(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(640, 480)
@@ -19,7 +19,7 @@ class Ui_MainWindow(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.titulo = QtWidgets.QLabel(self.centralwidget)
-        self.titulo.setGeometry(QtCore.QRect(240, 50, 141, 51))
+        self.titulo.setGeometry(QtCore.QRect(160, 60, 321, 51))
         font = QtGui.QFont()
         font.setPointSize(28)
         font.setBold(True)
@@ -29,13 +29,25 @@ class Ui_MainWindow(object):
 "   color: #FFF;\n"
 "}")
         self.titulo.setObjectName("titulo")
-        self.extrato = QtWidgets.QListView(self.centralwidget)
-        self.extrato.setGeometry(QtCore.QRect(130, 120, 361, 271))
-        self.extrato.setStyleSheet("QListView{\n"
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(210, 140, 201, 41))
+        self.lineEdit.setStyleSheet("QLineEdit {\n"
 "    background-color: #FFF;\n"
 "    border-radius: 10px;\n"
 "}")
-        self.extrato.setObjectName("extrato")
+        self.lineEdit.setObjectName("lineEdit")
+        self.buttonSacar = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonSacar.setGeometry(QtCore.QRect(340, 220, 89, 41))
+        self.buttonSacar.setStyleSheet("QPushButton{\n"
+"    color: #FFF;\n"
+"}")
+        self.buttonSacar.setObjectName("buttonSacar")
+        self.buttonVolta = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonVolta.setGeometry(QtCore.QRect(190, 220, 89, 41))
+        self.buttonVolta.setStyleSheet("QPushButton{\n"
+"    color: #FFF;\n"
+"}")
+        self.buttonVolta.setObjectName("buttonVolta")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -47,14 +59,17 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.titulo.setText(_translate("MainWindow", "Extrato"))
+        self.titulo.setText(_translate("MainWindow", "Saque de dinheiro"))
+        self.lineEdit.setPlaceholderText(_translate("MainWindow", "R$ 0,00"))
+        self.buttonSacar.setText(_translate("MainWindow", "Sacar"))
+        self.buttonVolta.setText(_translate("MainWindow", "Menu"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = T_Saque()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

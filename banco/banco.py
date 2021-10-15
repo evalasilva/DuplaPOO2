@@ -19,13 +19,20 @@ class Banco:
         else:
             return False
 
-    def cadastrar(self,nome, endereco, cpf, nasc):
+    def cadastrar(self,nome, endereco, cpf, nasc, senha):
         if self.jaexiste(cpf):
             return False
         else:
             cliente = Pessoa(nome, endereco, cpf, nasc)
-            conta = Conta(Banco._numero_conta, cliente)
+            conta = Conta(Banco._numero_conta, cliente, senha)
             self._dict_clientes[cpf] = conta
             Banco._numero_conta += 1
             Banco._total_contas += 1
             return True
+
+    def login(self, cpf, senha):
+
+        if self.jaexiste(cpf):
+            if self._dict_clientes[cpf].conta.senha == senha:
+                return True
+        return False

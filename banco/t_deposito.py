@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Tela_Saque.ui'
+# Form implementation generated from reading ui file 'Tela_Deposito.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -11,43 +11,43 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
+class T_Deposito(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(640, 480)
         MainWindow.setStyleSheet("background-color: rgb(52, 101, 164);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
+        self.valor = QtWidgets.QLineEdit(self.centralwidget)
+        self.valor.setGeometry(QtCore.QRect(210, 120, 211, 41))
+        self.valor.setStyleSheet("QLineEdit {\n"
+"    background-color: #FFF;\n"
+"    border-radius: 10px;\n"
+"}")
+        self.valor.setObjectName("valor")
         self.titulo = QtWidgets.QLabel(self.centralwidget)
-        self.titulo.setGeometry(QtCore.QRect(160, 60, 321, 51))
+        self.titulo.setGeometry(QtCore.QRect(230, 30, 161, 41))
         font = QtGui.QFont()
         font.setPointSize(28)
         font.setBold(True)
         font.setWeight(75)
         self.titulo.setFont(font)
         self.titulo.setStyleSheet("QLabel {\n"
-"   color: #FFF;\n"
+"    color: rgb(255, 255, 255);\n"
 "}")
         self.titulo.setObjectName("titulo")
-        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit.setGeometry(QtCore.QRect(210, 140, 201, 41))
-        self.lineEdit.setStyleSheet("QLineEdit {\n"
-"    background-color: #FFF;\n"
-"    border-radius: 10px;\n"
-"}")
-        self.lineEdit.setObjectName("lineEdit")
-        self.buttonSacar = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonSacar.setGeometry(QtCore.QRect(340, 220, 89, 41))
-        self.buttonSacar.setStyleSheet("QPushButton{\n"
+        self.buttonDepositar = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonDepositar.setGeometry(QtCore.QRect(360, 220, 89, 41))
+        self.buttonDepositar.setStyleSheet("QPushButton {\n"
 "    color: #FFF;\n"
 "}")
-        self.buttonSacar.setObjectName("buttonSacar")
-        self.buttonVolta = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonVolta.setGeometry(QtCore.QRect(190, 220, 89, 41))
-        self.buttonVolta.setStyleSheet("QPushButton{\n"
-"    color: #FFF;\n"
+        self.buttonDepositar.setObjectName("buttonDepositar")
+        self.buttonMenu = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonMenu.setGeometry(QtCore.QRect(190, 220, 89, 41))
+        self.buttonMenu.setStyleSheet("QPushButton{\n"
+"   color: #FFF;\n"
 "}")
-        self.buttonVolta.setObjectName("buttonVolta")
+        self.buttonMenu.setObjectName("buttonMenu")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -59,17 +59,17 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.titulo.setText(_translate("MainWindow", "Saque de dinheiro"))
-        self.lineEdit.setPlaceholderText(_translate("MainWindow", "R$ 0,00"))
-        self.buttonSacar.setText(_translate("MainWindow", "Sacar"))
-        self.buttonVolta.setText(_translate("MainWindow", "Menu"))
+        self.valor.setPlaceholderText(_translate("MainWindow", "R$ 0,00"))
+        self.titulo.setText(_translate("MainWindow", "Depósito"))
+        self.buttonDepositar.setText(_translate("MainWindow", "Depositar"))
+        self.buttonMenu.setText(_translate("MainWindow", "Menu"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = T_Deposito()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())

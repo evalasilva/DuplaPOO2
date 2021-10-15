@@ -3,8 +3,8 @@ from historico import Historico
 class Conta:
 
 
-    __slots__ = ['_numero', '_titular', '_saldo', '_limite', '_historico', '_l_max']
-    def __init__(self, numero, titular, saldo=0, limite=200):
+    __slots__ = ['_numero', '_titular', '_saldo', '_limite', '_historico', '_l_max', '_senha']
+    def __init__(self, numero, titular, senha, saldo=0, limite=200):
         self._numero = numero
         self._titular = titular
         self._saldo = saldo
@@ -36,6 +36,10 @@ class Conta:
     @limite.setter
     def limite(self, limite):
         self._limite = limite
+
+    @property
+    def senha(self):
+        return self._senha
 
     def depositar(self, valor):
         if valor > 0:

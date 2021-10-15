@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Tela_Deposito.ui'
+# Form implementation generated from reading ui file 'Tela_Extrato.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -11,43 +11,31 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
+class T_Extrato(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(640, 480)
         MainWindow.setStyleSheet("background-color: rgb(52, 101, 164);")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
-        self.valor = QtWidgets.QLineEdit(self.centralwidget)
-        self.valor.setGeometry(QtCore.QRect(210, 120, 211, 41))
-        self.valor.setStyleSheet("QLineEdit {\n"
-"    background-color: #FFF;\n"
-"    border-radius: 10px;\n"
-"}")
-        self.valor.setObjectName("valor")
         self.titulo = QtWidgets.QLabel(self.centralwidget)
-        self.titulo.setGeometry(QtCore.QRect(230, 30, 161, 41))
+        self.titulo.setGeometry(QtCore.QRect(240, 50, 141, 51))
         font = QtGui.QFont()
         font.setPointSize(28)
         font.setBold(True)
         font.setWeight(75)
         self.titulo.setFont(font)
         self.titulo.setStyleSheet("QLabel {\n"
-"    color: rgb(255, 255, 255);\n"
-"}")
-        self.titulo.setObjectName("titulo")
-        self.buttonDepositar = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonDepositar.setGeometry(QtCore.QRect(360, 220, 89, 41))
-        self.buttonDepositar.setStyleSheet("QPushButton {\n"
-"    color: #FFF;\n"
-"}")
-        self.buttonDepositar.setObjectName("buttonDepositar")
-        self.buttonMenu = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonMenu.setGeometry(QtCore.QRect(190, 220, 89, 41))
-        self.buttonMenu.setStyleSheet("QPushButton{\n"
 "   color: #FFF;\n"
 "}")
-        self.buttonMenu.setObjectName("buttonMenu")
+        self.titulo.setObjectName("titulo")
+        self.extrato = QtWidgets.QListView(self.centralwidget)
+        self.extrato.setGeometry(QtCore.QRect(130, 120, 361, 271))
+        self.extrato.setStyleSheet("QListView{\n"
+"    background-color: #FFF;\n"
+"    border-radius: 10px;\n"
+"}")
+        self.extrato.setObjectName("extrato")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -59,17 +47,14 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-        self.valor.setPlaceholderText(_translate("MainWindow", "R$ 0,00"))
-        self.titulo.setText(_translate("MainWindow", "Depósito"))
-        self.buttonDepositar.setText(_translate("MainWindow", "Depositar"))
-        self.buttonMenu.setText(_translate("MainWindow", "Menu"))
+        self.titulo.setText(_translate("MainWindow", "Extrato"))
 
 
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow()
+    ui = T_Extrato()
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
