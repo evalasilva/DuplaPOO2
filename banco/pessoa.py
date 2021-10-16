@@ -1,7 +1,7 @@
 class Pessoa:
 
     __slots__ = ['_nome', '_endereco', '_cpf', '_nasc']
-    def __init__(self, nome,endereco, cpf, nasc):
+    def __init__(self, nome, endereco, cpf, nasc):
         self._nome = nome
         self._endereco = endereco
         self._cpf = cpf
@@ -38,4 +38,5 @@ class Pessoa:
 
     def imprimir(self):
         print('Nome: {} - CPF: {} - Nasc: {}\n Endereço: {}'.format(self._nome, self._cpf, self._nasc, self._endereco))
+
 

@@ -6,11 +6,10 @@ class Historico:
         self.transacoes=[]
 
     def imprimir(self):
-        print('\nAbertura: {}'.format((self.data_abertura)))
-        print('Transações: ')
-
         uma_string = ''
+        uma_string += ('\nAbertura: {}'.format((self.data_abertura))) + '\n'
+        uma_string += 'Transações: ' + '\n'
+
         for t in self.transacoes:
             uma_string += t + '\n'
-
         return uma_string
