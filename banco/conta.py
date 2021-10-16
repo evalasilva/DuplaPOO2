@@ -10,6 +10,7 @@ class Conta:
         self._saldo = saldo
         self._l_max = limite
         self._limite = limite
+        self._senha = senha
         self._historico = Historico()
 
 
@@ -43,6 +44,7 @@ class Conta:
 
     def depositar(self, valor):
         if valor > 0:
+            self._historico.transacoes.append('Depósito de R${} '.format(valor))
             if self._limite == self._l_max:
                 self._saldo += valor
             else:
@@ -61,13 +63,15 @@ class Conta:
                 self._saldo -= valor
                 self._historico.transacoes.append('Saque de R${}'.format(valor))
                 return True
-
         self._historico.transacoes.append('Tentativa de saque de R${} - SALDO INSUFICIENTE!'.format(valor))
         return False
 
     def extrato(self):
-        print('\nConta: {} - Saldo: R${}'.format(self._numero, self._saldo))
+        uma_string = ''
+        uma_string += ('\nConta: {} - Saldo: R${}'.format(self._numero, self._saldo))+'\n'
+        uma_string += self._historico.imprimir() + '\n'
         self._historico.transacoes.append('Emissão de extrato-saldo de R${}\n'.format(self._saldo))
+        return uma_string
 
     def transferir(self, destino, valor):
 
@@ -96,6 +100,8 @@ class Conta:
         if valor >= divida:
             self._limite = self._l_max
             self._saldo += valor - divida
+            self._historico.transacoes.append('Pagamento de R${} do limite'.format(divida))
+
         else:
             self._limite += valor
-
+            self._historico.transacoes.append('Pagamento de R${} do limite'.format(valor))

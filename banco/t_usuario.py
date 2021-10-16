@@ -19,7 +19,7 @@ class T_Usuario(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(380, 200, 231, 131))
+        self.frame.setGeometry(QtCore.QRect(400, 140, 201, 111))
         self.frame.setStyleSheet("QFrame{\n"
 "    background-color: rgb(32, 74, 135);\n"
 "    border-radius: 10px;\n"
@@ -78,6 +78,32 @@ class T_Usuario(object):
         self.buttonSair.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.buttonSair.setStyleSheet("color: rgb(255, 255, 255);")
         self.buttonSair.setObjectName("buttonSair")
+        self.frame_2 = QtWidgets.QFrame(self.centralwidget)
+        self.frame_2.setGeometry(QtCore.QRect(400, 260, 201, 111))
+        self.frame_2.setStyleSheet("QFrame{\n"
+"    background-color: rgb(32, 74, 135);\n"
+"    border-radius: 10px;\n"
+"}\n"
+"")
+        self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
+        self.frame_2.setObjectName("frame_2")
+        self.label_4 = QtWidgets.QLabel(self.frame_2)
+        self.label_4.setGeometry(QtCore.QRect(60, 20, 91, 31))
+        font = QtGui.QFont()
+        font.setPointSize(20)
+        font.setBold(True)
+        font.setWeight(75)
+        self.label_4.setFont(font)
+        self.label_4.setStyleSheet("color: rgb(255, 255, 255);")
+        self.label_4.setObjectName("label_4")
+        self.limite = QtWidgets.QLabel(self.frame_2)
+        self.limite.setGeometry(QtCore.QRect(50, 50, 111, 61))
+        font = QtGui.QFont()
+        font.setPointSize(24)
+        self.limite.setFont(font)
+        self.limite.setStyleSheet("color: rgb(255, 255, 255);")
+        self.limite.setObjectName("limite")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -97,6 +123,8 @@ class T_Usuario(object):
         self.label_3.setText(_translate("MainWindow", "Olá, Eva"))
         self.buttonExtra.setText(_translate("MainWindow", "Extrato"))
         self.buttonSair.setText(_translate("MainWindow", "Sair"))
+        self.label_4.setText(_translate("MainWindow", "Limite"))
+        self.limite.setText(_translate("MainWindow", "R$ 0,00"))
 
 
 if __name__ == "__main__":

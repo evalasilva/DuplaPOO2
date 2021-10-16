@@ -28,35 +28,40 @@ class T_Transferencia(object):
         self.label.setStyleSheet("color: rgb(255, 255, 255);")
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(60, 120, 291, 17))
+        self.label_2.setGeometry(QtCore.QRect(160, 120, 291, 17))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.label_2.setFont(font)
         self.label_2.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(60, 210, 67, 17))
+        self.label_3.setGeometry(QtCore.QRect(160, 210, 67, 17))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.label_3.setFont(font)
         self.label_3.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_3.setObjectName("label_3")
         self.conta = QtWidgets.QLineEdit(self.centralwidget)
-        self.conta.setGeometry(QtCore.QRect(90, 240, 251, 41))
+        self.conta.setGeometry(QtCore.QRect(190, 240, 251, 41))
         self.conta.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
 "")
         self.conta.setObjectName("conta")
         self.buttonTransf = QtWidgets.QPushButton(self.centralwidget)
-        self.buttonTransf.setGeometry(QtCore.QRect(250, 340, 121, 41))
+        self.buttonTransf.setGeometry(QtCore.QRect(250, 320, 121, 41))
         self.buttonTransf.setStyleSheet("color: rgb(255, 255, 255);\n"
 "")
         self.buttonTransf.setObjectName("buttonTransf")
-        self.valorTransf = QtWidgets.QLineEdit(self.centralwidget)
-        self.valorTransf.setGeometry(QtCore.QRect(90, 150, 251, 41))
-        self.valorTransf.setStyleSheet("background-color: rgb(255, 255, 255);\n"
+        self.valor = QtWidgets.QLineEdit(self.centralwidget)
+        self.valor.setGeometry(QtCore.QRect(190, 150, 251, 41))
+        self.valor.setStyleSheet("background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;")
-        self.valorTransf.setObjectName("valorTransf")
+        self.valor.setObjectName("valor")
+        self.buttonVolta = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonVolta.setGeometry(QtCore.QRect(470, 410, 121, 41))
+        self.buttonVolta.setStyleSheet("color: rgb(255, 255, 255);\n"
+"")
+        self.buttonVolta.setObjectName("buttonVolta")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
@@ -72,7 +77,8 @@ class T_Transferencia(object):
         self.label_2.setText(_translate("MainWindow", "Qual é o valor da transferência?"))
         self.label_3.setText(_translate("MainWindow", "Conta"))
         self.buttonTransf.setText(_translate("MainWindow", "Transferir"))
-        self.valorTransf.setPlaceholderText(_translate("MainWindow", "R$ 0,00"))
+        self.valor.setPlaceholderText(_translate("MainWindow", "R$ 0,00"))
+        self.buttonVolta.setText(_translate("MainWindow", "Voltar"))
 
 
 if __name__ == "__main__":

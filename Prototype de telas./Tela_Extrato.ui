@@ -42,22 +42,6 @@
      <string>Extrato</string>
     </property>
    </widget>
-   <widget class="QListView" name="extrato">
-    <property name="geometry">
-     <rect>
-      <x>130</x>
-      <y>90</y>
-      <width>361</width>
-      <height>271</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">QListView{
-	background-color: #FFF;
-	border-radius: 10px;
-}</string>
-    </property>
-   </widget>
    <widget class="QPushButton" name="buttonVoltar">
     <property name="geometry">
      <rect>
@@ -72,6 +56,19 @@
     </property>
     <property name="text">
      <string>Voltar</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="extrato">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>90</y>
+      <width>461</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
    </widget>
   </widget>

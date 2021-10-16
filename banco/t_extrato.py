@@ -19,7 +19,7 @@ class T_Extrato(object):
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.titulo = QtWidgets.QLabel(self.centralwidget)
-        self.titulo.setGeometry(QtCore.QRect(240, 50, 141, 51))
+        self.titulo.setGeometry(QtCore.QRect(240, 20, 141, 51))
         font = QtGui.QFont()
         font.setPointSize(28)
         font.setBold(True)
@@ -29,12 +29,13 @@ class T_Extrato(object):
 "   color: #FFF;\n"
 "}")
         self.titulo.setObjectName("titulo")
-        self.extrato = QtWidgets.QListView(self.centralwidget)
-        self.extrato.setGeometry(QtCore.QRect(130, 120, 361, 271))
-        self.extrato.setStyleSheet("QListView{\n"
-"    background-color: #FFF;\n"
-"    border-radius: 10px;\n"
-"}")
+        self.buttonVoltar = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonVoltar.setGeometry(QtCore.QRect(260, 380, 90, 28))
+        self.buttonVoltar.setStyleSheet("color: #FFF;")
+        self.buttonVoltar.setObjectName("buttonVoltar")
+        self.extrato = QtWidgets.QTextEdit(self.centralwidget)
+        self.extrato.setGeometry(QtCore.QRect(90, 90, 461, 271))
+        self.extrato.setStyleSheet("background-color: rgb(255, 255, 255);")
         self.extrato.setObjectName("extrato")
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
@@ -48,6 +49,7 @@ class T_Extrato(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.titulo.setText(_translate("MainWindow", "Extrato"))
+        self.buttonVoltar.setText(_translate("MainWindow", "Voltar"))
 
 
 if __name__ == "__main__":

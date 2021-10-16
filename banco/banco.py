@@ -30,9 +30,3 @@ class Banco:
             Banco._total_contas += 1
             return True
 
-    def login(self, cpf, senha):
-
-        if self.jaexiste(cpf):
-            if self._dict_clientes[cpf].conta.senha == senha:
-                return True
-        return False
