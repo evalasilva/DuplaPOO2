@@ -61,7 +61,7 @@ class T_Login(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Tela de Login"))
         self.label.setText(_translate("MainWindow", "BANCO"))
         self.cpf.setPlaceholderText(_translate("MainWindow", "CPF"))
         self.entrar.setText(_translate("MainWindow", "ENTRAR"))

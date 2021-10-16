@@ -72,7 +72,7 @@ class T_Transferencia(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Tela de Transferência"))
         self.label.setText(_translate("MainWindow", "Transferência"))
         self.label_2.setText(_translate("MainWindow", "Qual é o valor da transferência?"))
         self.label_3.setText(_translate("MainWindow", "Conta"))

@@ -47,7 +47,7 @@ class T_Extrato(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Tela de Extrato"))
         self.titulo.setText(_translate("MainWindow", "Extrato"))
         self.buttonVoltar.setText(_translate("MainWindow", "Voltar"))
 

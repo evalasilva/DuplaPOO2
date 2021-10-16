@@ -60,7 +60,7 @@ class T_Usuario(object):
         self.buttonSaque.setStyleSheet("color: rgb(255, 255, 255);")
         self.buttonSaque.setObjectName("buttonSaque")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(260, 40, 141, 51))
+        self.label_3.setGeometry(QtCore.QRect(260, 40, 210, 51))
         font = QtGui.QFont()
         font.setPointSize(28)
         font.setBold(True)
@@ -114,13 +114,13 @@ class T_Usuario(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Tela de Usuário"))
         self.label.setText(_translate("MainWindow", "Saldo"))
         self.saldo.setText(_translate("MainWindow", "R$ 0,00"))
         self.buttonTransf.setText(_translate("MainWindow", "Transferência"))
         self.buttonDepos.setText(_translate("MainWindow", "Depósito"))
         self.buttonSaque.setText(_translate("MainWindow", "Saque"))
-        self.label_3.setText(_translate("MainWindow", "Olá, Eva"))
+        self.label_3.setText(_translate("MainWindow", "Bem vindo(a)!"))
         self.buttonExtra.setText(_translate("MainWindow", "Extrato"))
         self.buttonSair.setText(_translate("MainWindow", "Sair"))
         self.label_4.setText(_translate("MainWindow", "Limite"))

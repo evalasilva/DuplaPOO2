@@ -112,7 +112,7 @@ class T_Cadastro(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Tela de Cadastro"))
         self.label.setText(_translate("MainWindow", "Cadastro"))
         self.label_2.setText(_translate("MainWindow", "Nome"))
         self.label_3.setText(_translate("MainWindow", "Endereço"))

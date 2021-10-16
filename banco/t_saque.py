@@ -58,7 +58,7 @@ class T_Saque(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Tela de Saque"))
         self.titulo.setText(_translate("MainWindow", "Saque de dinheiro"))
         self.lineEdit.setPlaceholderText(_translate("MainWindow", "R$ 0,00"))
         self.buttonSacar.setText(_translate("MainWindow", "Sacar"))
