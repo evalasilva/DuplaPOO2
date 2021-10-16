@@ -75,7 +75,7 @@ class T_Transferencia(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "Tela de Transferência"))
         self.label.setText(_translate("MainWindow", "Transferência"))
         self.label_2.setText(_translate("MainWindow", "Qual é o valor da transferência?"))
-        self.label_3.setText(_translate("MainWindow", "Conta"))
+        self.label_3.setText(_translate("MainWindow", "CPF"))
         self.buttonTransf.setText(_translate("MainWindow", "Transferir"))
         self.valor.setPlaceholderText(_translate("MainWindow", "R$ 0,00"))
         self.buttonVolta.setText(_translate("MainWindow", "Voltar"))
