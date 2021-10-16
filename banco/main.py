@@ -97,7 +97,7 @@ class Main(QMainWindow, Ui_Main):
         nome = self.t_cadastro.nome.text()
         endereco = self.t_cadastro.endereco.text()
         nasc = self.t_cadastro.nasc.text()
-        senha = self.validarsenha()
+        senha = self.t_cadastro.cpf.text()
         # validar senha
         if cpf == '' or nome == '' or endereco == '' or nasc == '' or senha == '':
             QMessageBox.information(None, 'Atenção!', 'Preencha todos os campos')
@@ -109,6 +109,7 @@ class Main(QMainWindow, Ui_Main):
             else:
                 QMessageBox.information(None, 'Atenção!', 'CPF já cadastrado!\nVerifique e tente novamente!')
                 self.t_cadastro.cpf.setText('')
+
 
 
     def logar(self):
@@ -129,24 +130,24 @@ class Main(QMainWindow, Ui_Main):
         self.t_login.cpf.setText('')
         self.t_login.senha.setText('')
 
-    def validarsenha(self):
-        invalida = 1
-        senha = ''
-        while(invalida):
-
-            senha = self.t_cadastro.senha.text()
-            if len(senha) == 6:
-                if (print(all(chr.isdigit() for chr in senha))):
-                    invalida = 0
-                else:
-                    QMessageBox.information(None, 'Atenção!', 'Utilize apenas números!')
-            else:
-                QMessageBox.information(None, 'Atenção!', 'A senha deve conter 6 números!')
-
-            if invalida:
-                self.t_cadastro.senha.setText('')
-                self.abrir_cadastrar()
-        return senha
+    # def validarsenha(self):
+    #     invalida = 1
+    #     senha = ''
+    #     while(invalida):
+    #
+    #         senha = self.t_cadastro.senha.text()
+    #         if len(senha) == 6:
+    #             if (print(all(chr.isdigit() for chr in senha))):
+    #                 invalida = 0
+    #             else:
+    #                 QMessageBox.information(None, 'Atenção!', 'Utilize apenas números!')
+    #         else:
+    #             QMessageBox.information(None, 'Atenção!', 'A senha deve conter 6 números!')
+    #
+    #         if invalida:
+    #             self.t_cadastro.senha.setText('')
+    #             self.abrir_cadastrar()
+    #     return senha
 
     def depositar(self):
         valor = float(self.t_deposito.valor.text())
@@ -189,7 +190,7 @@ class Main(QMainWindow, Ui_Main):
             self.t_transferencia.valor.setText('')
             self.t_transferencia.conta.setText('')
         else:
-            QMessageBox.information(None, 'Atenção!', 'CPF de destino Inválida!\nVerifique e tente novamente!')
+            QMessageBox.information(None, 'Atenção!', 'CPF de destino Inválido!\nVerifique e tente novamente!')
 
     def limpa_t_cadastro(self):
         self.t_cadastro.nome.setText('')
@@ -199,7 +200,9 @@ class Main(QMainWindow, Ui_Main):
 
 
     def abrir_login(self):
-        self.cpf_usuario_atual = ''
+        self.cpf_usuario_atual = ('')
+        self.t_login.cpf.setText('')
+        self.t_login.senha.setText('')
         self.QtStack.setCurrentIndex(0)
 
     def abrir_usuario(self):
@@ -210,15 +213,25 @@ class Main(QMainWindow, Ui_Main):
         self.QtStack.setCurrentIndex(3)
 
     def abrir_cadastrar(self):
+        self.t_login.cpf.setText('')
+        self.t_login.senha.setText('')
+        self.t_cadastro.senha.setText('')
+        self.t_cadastro.cpf.setText('')
+        self.t_cadastro.nome.setText('')
+        self.t_cadastro.endereco.setText('')
         self.QtStack.setCurrentIndex(1)
 
     def abrir_depositar(self):
+        self.t_deposito.valor.setText('')
         self.QtStack.setCurrentIndex(2)
 
     def abrir_transferencia(self):
+        self.t_transferencia.valor.setText('')
+        self.t_transferencia.conta.setText('')
         self.QtStack.setCurrentIndex(5)
 
     def abrir_saque(self):
+        self.t_saque.lineEdit.setText('')
         self.QtStack.setCurrentIndex(4)
 
 if __name__ == '__main__':
