@@ -21,10 +21,10 @@ class T_Usuario(object):
         self.frame = QtWidgets.QFrame(self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(400, 140, 201, 111))
         self.frame.setStyleSheet("QFrame{\n"
-"    background-color: rgb(32, 74, 135);\n"
-"    border-radius: 10px;\n"
-"}\n"
-"")
+                                 "    background-color: rgb(32, 74, 135);\n"
+                                 "    border-radius: 10px;\n"
+                                 "}\n"
+                                 "")
         self.frame.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame.setObjectName("frame")
@@ -46,7 +46,8 @@ class T_Usuario(object):
         self.saldo.setObjectName("saldo")
         self.buttonTransf = QtWidgets.QPushButton(self.centralwidget)
         self.buttonTransf.setGeometry(QtCore.QRect(30, 140, 311, 31))
-        self.buttonTransf.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.buttonTransf.setCursor(
+            QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.buttonTransf.setStyleSheet("color: rgb(255, 255, 255);")
         self.buttonTransf.setObjectName("buttonTransf")
         self.buttonDepos = QtWidgets.QPushButton(self.centralwidget)
@@ -60,7 +61,7 @@ class T_Usuario(object):
         self.buttonSaque.setStyleSheet("color: rgb(255, 255, 255);")
         self.buttonSaque.setObjectName("buttonSaque")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(260, 40, 210, 51))
+        self.label_3.setGeometry(QtCore.QRect(230, 40, 250, 51))
         font = QtGui.QFont()
         font.setPointSize(28)
         font.setBold(True)
@@ -81,10 +82,10 @@ class T_Usuario(object):
         self.frame_2 = QtWidgets.QFrame(self.centralwidget)
         self.frame_2.setGeometry(QtCore.QRect(400, 260, 201, 111))
         self.frame_2.setStyleSheet("QFrame{\n"
-"    background-color: rgb(32, 74, 135);\n"
-"    border-radius: 10px;\n"
-"}\n"
-"")
+                                   "    background-color: rgb(32, 74, 135);\n"
+                                   "    border-radius: 10px;\n"
+                                   "}\n"
+                                   "")
         self.frame_2.setFrameShape(QtWidgets.QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QtWidgets.QFrame.Raised)
         self.frame_2.setObjectName("frame_2")

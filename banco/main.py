@@ -60,6 +60,7 @@ class Ui_Main(QtWidgets.QWidget):
         self.QtStack.addWidget(self.stack5)
         self.QtStack.addWidget(self.stack6)
 
+
 class Main(QMainWindow, Ui_Main):
     def __init__(self, parent=None):
         super(Main, self).__init__(parent)
@@ -97,67 +98,63 @@ class Main(QMainWindow, Ui_Main):
         nome = self.t_cadastro.nome.text()
         endereco = self.t_cadastro.endereco.text()
         nasc = self.t_cadastro.nasc.text()
-        senha = self.t_cadastro.cpf.text()
-        # validar senha
-        if cpf == '' or nome == '' or endereco == '' or nasc == '' or senha == '':
-            QMessageBox.information(None, 'Atenção!', 'Preencha todos os campos')
+        senha = self.t_cadastro.senha.text()
+
+        if cpf == '' or nome == '' or endereco == '' or senha == '':
+            QMessageBox.information(
+                None, 'Atenção!', 'Preencha todos os campos')
+        elif len(senha) != 6:
+            QMessageBox.information(
+                None, 'Atenção!', 'A senha dever conter 6 números')
+        elif not all(chr.isdigit() for chr in senha):
+            QMessageBox.information(
+                None, 'Atenção!', 'A senha dever apenas números')
         else:
             if self.b.cadastrar(nome, endereco, cpf, nasc, senha):
-                QMessageBox.information(None, 'Atenção!', 'Pessoa cadastrada com sucesso!')
+                QMessageBox.information(
+                    None, 'Atenção!', 'Pessoa cadastrada com sucesso!')
                 self.limpa_t_cadastro()
                 self.abrir_login()
             else:
-                QMessageBox.information(None, 'Atenção!', 'CPF já cadastrado!\nVerifique e tente novamente!')
+                QMessageBox.information(
+                    None, 'Atenção!', 'CPF já cadastrado!\nVerifique e tente novamente!')
                 self.t_cadastro.cpf.setText('')
-
-
 
     def logar(self):
         cpf = self.t_login.cpf.text()
         senha = self.t_login.senha.text()
         if self.b.jaexiste(cpf):
             if self.b._dict_clientes[cpf].senha == senha:
-                self.t_usuario.saldo.setText('R$ ' + str(self.b._dict_clientes[cpf]._saldo))
-                self.t_usuario.limite.setText('R$ ' + str(self.b._dict_clientes[cpf].limite))
+                self.t_usuario.saldo.setText(
+                    'R$ ' + str(self.b._dict_clientes[cpf]._saldo))
+                self.t_usuario.limite.setText(
+                    'R$ ' + str(self.b._dict_clientes[cpf].limite))
                 self.cpf_usuario_atual = cpf
                 self.t_login.cpf.setText('')
                 self.t_login.senha.setText('')
                 self.abrir_usuario()
             else:
-                QMessageBox.information(None, 'Atenção!','Senha Incorreta!\nVerifique e tente novamente!')
+                QMessageBox.information(
+                    None, 'Atenção!', 'Senha Incorreta!\nVerifique e tente novamente!')
         else:
-            QMessageBox.information(None, 'Atenção!','Cliente não encontrado!\nVerifique e tente novamente!')
+            QMessageBox.information(
+                None, 'Atenção!', 'Cliente não encontrado!\nVerifique e tente novamente!')
         self.t_login.cpf.setText('')
         self.t_login.senha.setText('')
-
-    # def validarsenha(self):
-    #     invalida = 1
-    #     senha = ''
-    #     while(invalida):
-    #
-    #         senha = self.t_cadastro.senha.text()
-    #         if len(senha) == 6:
-    #             if (print(all(chr.isdigit() for chr in senha))):
-    #                 invalida = 0
-    #             else:
-    #                 QMessageBox.information(None, 'Atenção!', 'Utilize apenas números!')
-    #         else:
-    #             QMessageBox.information(None, 'Atenção!', 'A senha deve conter 6 números!')
-    #
-    #         if invalida:
-    #             self.t_cadastro.senha.setText('')
-    #             self.abrir_cadastrar()
-    #     return senha
 
     def depositar(self):
         valor = float(self.t_deposito.valor.text())
         if (self.b._dict_clientes[self.cpf_usuario_atual].depositar(valor)):
-            QMessageBox.information(None, 'Atenção!', 'Depósito realizado com sucesso!')
-            self.t_usuario.saldo.setText('R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual]._saldo))
-            self.t_usuario.limite.setText('R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual].limite))
+            QMessageBox.information(
+                None, 'Atenção!', 'Depósito realizado com sucesso!')
+            self.t_usuario.saldo.setText(
+                'R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual]._saldo))
+            self.t_usuario.limite.setText(
+                'R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual].limite))
             self.abrir_usuario()
         else:
-            QMessageBox.information(None, 'Atenção!', 'Operação Inválida!\nVerifique e tente novamente!')
+            QMessageBox.information(
+                None, 'Atenção!', 'Operação Inválida!\nVerifique e tente novamente!')
         self.t_deposito.valor.setText('')
 
     def extrato(self):
@@ -168,36 +165,44 @@ class Main(QMainWindow, Ui_Main):
     def sacar(self):
         valor = float(self.t_saque.lineEdit.text())
         if (self.b._dict_clientes[self.cpf_usuario_atual].sacar(valor)):
-            QMessageBox.information(None, 'Atenção!', 'Saque realizado com sucesso!')
-            self.t_usuario.saldo.setText('R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual]._saldo))
-            self.t_usuario.limite.setText('R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual].limite))
+            QMessageBox.information(
+                None, 'Atenção!', 'Saque realizado com sucesso!')
+            self.t_usuario.saldo.setText(
+                'R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual]._saldo))
+            self.t_usuario.limite.setText(
+                'R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual].limite))
             self.abrir_usuario()
         else:
-            QMessageBox.information(None, 'Atenção!', 'Saldo Insuficiente!\nVerifique e tente novamente!')
+            QMessageBox.information(
+                None, 'Atenção!', 'Saldo Insuficiente!\nVerifique e tente novamente!')
         self.t_saque.lineEdit.setText('')
 
     def transferencia(self):
         valor = float(self.t_transferencia.valor.text())
         cpf = self.t_transferencia.conta.text()
         if (self.b.jaexiste(cpf)):
-            if (self.b._dict_clientes[self.cpf_usuario_atual].transferir(self.b._dict_clientes[cpf],valor)):
-                QMessageBox.information(None, 'Atenção!', 'Transferência realizada com sucesso!')
-                self.t_usuario.saldo.setText('R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual]._saldo))
-                self.t_usuario.limite.setText('R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual].limite))
+            if (self.b._dict_clientes[self.cpf_usuario_atual].transferir(self.b._dict_clientes[cpf], valor)):
+                QMessageBox.information(
+                    None, 'Atenção!', 'Transferência realizada com sucesso!')
+                self.t_usuario.saldo.setText(
+                    'R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual]._saldo))
+                self.t_usuario.limite.setText(
+                    'R$ ' + str(self.b._dict_clientes[self.cpf_usuario_atual].limite))
                 self.abrir_usuario()
             else:
-                QMessageBox.information(None, 'Atenção!', 'Operação Inválida!\nVerifique e tente novamente!')
+                QMessageBox.information(
+                    None, 'Atenção!', 'Operação Inválida!\nVerifique e tente novamente!')
             self.t_transferencia.valor.setText('')
             self.t_transferencia.conta.setText('')
         else:
-            QMessageBox.information(None, 'Atenção!', 'CPF de destino Inválido!\nVerifique e tente novamente!')
+            QMessageBox.information(
+                None, 'Atenção!', 'CPF de destino Inválido!\nVerifique e tente novamente!')
 
     def limpa_t_cadastro(self):
         self.t_cadastro.nome.setText('')
         self.t_cadastro.cpf.setText('')
         self.t_cadastro.senha.setText('')
         self.t_cadastro.endereco.setText('')
-
 
     def abrir_login(self):
         self.cpf_usuario_atual = ('')
@@ -233,6 +238,7 @@ class Main(QMainWindow, Ui_Main):
     def abrir_saque(self):
         self.t_saque.lineEdit.setText('')
         self.QtStack.setCurrentIndex(4)
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)

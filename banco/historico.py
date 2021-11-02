@@ -1,9 +1,10 @@
 import datetime
 
+
 class Historico:
     def __init__(self):
-        self.data_abertura = datetime.datetime.today()
-        self.transacoes=[]
+        self.data_abertura = datetime.datetime.today().strftime('%d/%m/%Y %H:%M:%S')
+        self.transacoes = []
 
     def imprimir(self):
         uma_string = ''
